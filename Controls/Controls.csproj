@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4B12F0D-0211-4AE4-8011-5BEA0391BE39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Controls</RootNamespace>
+    <AssemblyName>Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarraProgresso.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Botao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BotaoRadio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CaixaImagemArredondada.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CaixaTexto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaixaTextoArredondado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaixaTextoArredondado.Designer.cs">
+      <DependentUpon>CaixaTextoArredondado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Combo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataSelecao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPadrao.Designer.cs">
+      <DependentUpon>frmPadrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensagem.Designer.cs">
+      <DependentUpon>Mensagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MenuCorTabela.cs" />
+    <Compile Include="MenuRenderer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BotaoAlternar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtNumero.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtValor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmPadrao.resx">
+      <DependentUpon>frmPadrao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensagem.resx">
+      <DependentUpon>Mensagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CaixaTexto.Designer.cs" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalendarioImagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalendarioImagemPreto1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
